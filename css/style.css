@@ -64,3 +64,7 @@ overflow-x: auto !important;
 	filter: alpha(opacity=0);
 	opacity: 0.0;
 }
+
+.container:before {
+	content: none;
+}
