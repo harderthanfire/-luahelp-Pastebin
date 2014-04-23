@@ -36,6 +36,14 @@ if($_POST['user_token'] == $_SESSION['user_token'])
 		$paste[ "sname" ] = $sname;
 		$paste[ "nname" ] = $nname;
 		$paste[ "code" ] = $code;
+		if (strpos($sname,'gmail.com') !== false) 
+		{
+    			die('Please do not use an email address as the name.');
+		}
+		if (strpos($nname,'gmail.com') !== false) 
+		{
+   			 die('Please do not use an email address as the name.');
+		} 
 		$correct = $db->Query("SELECT COUNT(*) FROM `languages` WHERE lang_id = '" . mysql_real_escape_string($lang) . "' LIMIT 0, 1");
 		if ($correct < 1)
 		{
