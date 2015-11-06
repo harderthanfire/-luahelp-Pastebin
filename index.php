@@ -99,7 +99,7 @@ if( !empty( $edit ) )
       <option value="168">1 week</option>
       <option value="672">4 weeks</option>
     </select>
-    <input type="text" class="showTooltip" title="Your Name" name="nname" id="nname" placeholder="Your Name" size="45" <?php if(!empty($remembered_name)) {echo 'value="' . htmlentities($remembered_name) . '"';} else{echo 'placeholder="Your Name"';} ?>/>
+    <input type="text" class="showTooltip" title="Your Name" name="nname" id="nname" size="45" <?php if(!empty($remembered_name)) {echo 'value="' . htmlentities($remembered_name) . '"';} else{echo 'placeholder="Your Name"';} ?>/>
     <input type="text" class="showTooltip" title="Paste Title" name="sname" id="sname"<?php if( !empty( $alter ) ) { echo ' value="Alteration of ' . htmlentities( $orig["sname"] ) . '"'; } elseif ( !empty($edit) ) {echo ' value="' . htmlentities( $orig["sname"] ) . '"';} else {echo ' placeholder="Paste Title" value=""';} ?> size="45" />
     <i class="icon-lock" style="margin-top: 3px; margin-right: 3px;"></i><input type="checkbox" class="checkbox-inline showTooltip" title="Private Paste?" name="private" value="1">
     <input name="website" type="hidden" id="website" title="Website" />
