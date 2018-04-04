@@ -5,7 +5,7 @@ function DbQuery($query)
 {
    $db = mysql_connect($dbhost, $dbuser, $dbpass) or return die ('Error connecting to mysql');
    mysql_select_db($dbname, $db);
-   $SQL = mysql_real_escape_string($query);
+   $SQL = mysqli_real_escape_string($query);
    $result = mysql_query($query);
    if (!$result) 
    {
