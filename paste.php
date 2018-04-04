@@ -44,7 +44,7 @@ if($_POST['user_token'] == $_SESSION['user_token'])
 		{
    			 die('Please do not use an email address as the name.');
 		} 
-		$correct = $db->Query("SELECT COUNT(*) FROM `languages` WHERE lang_id = '" . mysql_real_escape_string($lang) . "' LIMIT 0, 1");
+		$correct = $db->Query("SELECT COUNT(*) FROM `languages` WHERE lang_id = '" . mysqli_real_escape_string($lang) . "' LIMIT 0, 1");
 		if ($correct < 1)
 		{
 		$paste[ "language" ] = "text";	
